@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Get to The FOX!!!</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div id="header">
+			<h1>Get to The Fox!</h1>
+		</div>
+		<div class="row">
+
+			<!-- Images -->
+			<div class="col-md-3 col-md-offset-1" id="fox-image">
+				<img class="img-responsive" src="./images/fox-sign-veerkamp.jpg">
+			</div>
+			
+			<div class="col-md-3 col-md-offset-1">
+				<div id="scoreboard">
+					<p class="score-energy">Current Energy:</p>
+					<div id="energy-score"></div>
+					<p class="score-blocks">Blocks Left:</p>
+					<div id="blocks-score"></div>
+				</div>
+			</div>
+
+			<!-- Task box -->
+			<div class="col-md-7" id="beg-screen">
+				<div class="questions">
+					<p class="win">You have 20 points of energy to go 7 blocks to get to the concert. You'll have to stop and get food and drinks to keep your energy up along the way. Different foods and drinks adjust your energy level differently. It requires 4 points of energy to move up one block. Keep in mind that each turn moves you one block.</p>
+
+					<p class="win">Think you can make it??</p>
+				</div>
+				<div class="btn center-block" id="start-game">
+				  <button type="button" class="btn btn-default">Start Game</button>
+				</div>
+
+				<!-- Checkboxes -->
+<!-- 				<div class="row" id="selections">
+					<div id="selections1" class="col-md-6 set1">
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="4" name="type"> Salad (+4 energy)</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="-1" name="type"> Burger and fries</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="3" name="type"> Grilled cheese sandwhich</label></div>
+					</div>
+
+					<div id="selections2" class="col-md-6 set1">
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="4" name="type2"> Water</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="-1" name="type2"> Wine</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="-2" name="type2"> Beer</label></div>
+					</div>
+				</div> -->
+			</div>
+
+			<!-- First Move -->
+			<div class="col-md-7 screens" id="1-screen">
+				<div class="questions">
+					<p class="win">Before we get going, let's get someting in our bellys. Here's a cafe we can visit.</p>
+					<p class="win">Select one item from each list and click 'Select' to move on to the next block.</p>
+					<p class="win">Reminder: You lose 4 energy each time you move a block.</p>
+				</div>
+
+				<!-- Checkboxes -->
+				<div class="row" id="selections1">
+					<div id="selections1" class="col-md-6 set1">
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="4" name="type"> Salad</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type"> Burger and fries</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="2" name="type"> Grilled cheese</label></div>
+					</div>
+
+					<div id="selections2" class="col-md-6 set1">
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="4" name="type2"> Water</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="2" name="type2"> Iced tea</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="-2" name="type2"> Soda</label></div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Second Move -->
+			<div class="col-md-7 screens" id="2-screen">
+				<div class="questions">
+					<p class="win">A bar!!! Let's get a small bite and a drink, shall we?</p>
+				</div>
+
+				<!-- Checkboxes -->
+				<div class="row" id="selections">
+					<div id="selections1" class="col-md-6 set1">
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="-3" name="type"> Chicken wings</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="-2" name="type"> Chips and dip</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type"> Peanuts</label></div>
+					</div>
+
+					<div id="selections2" class="col-md-6 set1">
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="-4" name="type2"> Shot of tequila</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="-2" name="type2"> Wine</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="-1" name="type2"> Lite beer</label></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Third Move -->
+			<div class="col-md-7 screens" id="3-screen">
+				<div class="questions">
+					<p class="win">Burrito time!!!!</p>
+				</div>
+
+				<!-- Checkboxes -->
+				<div class="row" id="selections">
+					<div id="selections1" class="col-md-6 set1">
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="2" name="type"> Carne Asada</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="3" name="type"> Pollo asada</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="-1" name="type"> Carnitas supreme</label></div>
+					</div>
+
+					<div id="selections2" class="col-md-6 set1">
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="2" name="type2"> Horchata</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="-1" name="type2"> Corona</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="-2" name="type2"> Dos Equis</label></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Fourth Move -->
+			<div class="col-md-7 screens" id="4-screen">
+				<div class="questions">
+					<p class="win">Looks like we've stumbled upon a craft beer fest with some food trucks. Our lucky day!!</p>
+				</div>
+
+				<!-- Checkboxes -->
+				<div class="row" id="selections">
+					<div id="selections1" class="col-md-6 set1">
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="2" name="type"> Duck poutine</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type"> 2 Pupusas</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type"> 2 Fish tacos</label></div>
+					</div>
+
+					<div id="selections2" class="col-md-6 set1">
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="-4" name="type2"> Barrel aged IPA</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="-2" name="type2"> Framboise lambic</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="-1" name="type2"> Apple cider</label></div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Fifth Move -->
+			<div class="col-md-7 screens" id="5-screen">
+				<div class="questions">
+					<p class="win">Getting closer. Let's hit up another bar.</p>
+				</div>
+
+				<!-- Checkboxes -->
+				<div class="row" id="selections">
+					<div id="selections1" class="col-md-6 set1">
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="-1" name="type"> Cheese curds</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type"> </label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type"> Grilled cheese sandwhich</label></div>
+					</div>
+
+					<div id="selections2" class="col-md-6 set1">
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type2"> Water</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type2"> Wine</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type2"> Beer</label></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Sixth Move -->
+			<div class="col-md-7 screens" id="6-screen">
+				<div class="questions">
+					<p class="win">Sixth Move</p>
+				</div>
+
+				<!-- Checkboxes -->
+				<div class="row" id="selections">
+					<div id="selections1" class="col-md-6 set1">
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type"> Salad</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type"> Burger and fries</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type"> Grilled cheese sandwhich</label></div>
+					</div>
+
+					<div id="selections2" class="col-md-6 set1">
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type2"> Water</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type2"> Wine</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type2"> Beer</label></div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Seventh Move -->
+			<div class="col-md-7 screens" id="7-screen">
+				<div class="questions">
+					<p class="win">Seventh Move</p>
+				</div>
+
+				<!-- Checkboxes -->
+				<div class="row" id="selections">
+					<div id="selections1" class="col-md-6 set1">
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type"> Salad</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type"> Burger and fries</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type"> Grilled cheese sandwhich</label></div>
+					</div>
+
+					<div id="selections2" class="col-md-6 set1">
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type2"> Water</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type2"> Wine</label></div>
+						<div class="checkbox"><label><input type="checkbox" class="radio" value="1" name="type2"> Beer</label></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Game Win -->
+			<div class="col-md-7" id="win-screen">
+				<div class="questions">
+					<p class="win">Congratulations!!! You made it!!</p>
+				</div>
+			</div>
+
+			<!-- Game Lose -->
+			<div class="col-md-7" id="lose-screen">
+				<div class="questions">
+					<p class="win">Congratulations!!! You suck, dude!! You surely are not Batman....</p>
+				</div>
+				<div class="col-md-7 col-md-offset-4">
+					<div class="btn center-block" id="reset-button">
+				  <button type="button" class="btn btn-default" id="reset">Reset Game</button>
+			  	</div>
+			</div>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-md-7 col-md-offset-4">
+				<div class="btn center-block" id="select-button">
+				  <button type="button" class="btn btn-default" id="select">Select</button>
+			  	</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>
